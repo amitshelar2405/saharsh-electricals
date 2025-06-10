@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saharsh Electricals & Engineers | Pune</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals (Slate, Amber) -->
+    <!-- Application Structure Plan: A single-page application with a fixed navigation bar (Home, Services, Clients, About) that smoothly scrolls to corresponding sections. This structure provides a modern, website-like experience that is more user-friendly and professional than a static document. The core interaction is a tabbed interface for the 'Services' section, allowing users to easily filter between Residential, Commercial, and Industrial offerings without being overwhelmed by a single long list. This prioritizes clarity and targeted information retrieval. -->
+    <!-- Visualization & Content Choices: Report Info: Service Categories -> Goal: Organize/Filter -> Presentation: Tabbed Interface (HTML/CSS/JS) -> Interaction: Click tabs to show/hide service lists -> Justification: Prevents information overload and allows users to quickly find relevant services. Report Info: Esteemed Clients -> Goal: Build Credibility -> Presentation: Styled Cards in a Grid (HTML/Tailwind) -> Interaction: Static display with added project descriptions -> Justification: A clean, professional layout with contextual details enhances brand perception and showcases expertise. Report Info: Why Choose Us -> Goal: Inform/Persuade -> Presentation: Grid with Unicode Icons (HTML/Tailwind) -> Justification: Icons improve scannability and visual appeal. CONFIRMING NO SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tab-active {
+            border-color: #f59e0b; /* amber-500 */
+            color: #f59e0b;
+            font-weight: 600;
+        }
+        .tab-inactive {
+            border-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-slate-900 flex items-center space-x-2">
+                <span class="text-amber-500 text-2xl">⚡</span>
+                <span>Saharsh Electricals & Engineers</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-slate-600 hover:text-amber-600 transition-colors duration-300">Services</a>
+                <a href="#clients" class="text-slate-600 hover:text-amber-600 transition-colors duration-300">Clients</a>
+                <a href="#about" class="text-slate-600 hover:text-amber-600 transition-colors duration-300">About</a>
+                <a href="#contact" class="bg-amber-500 text-white px-4 py-2 rounded-lg hover:bg-amber-600 transition-colors duration-300 shadow">Contact Us</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-slate-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#services" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">Services</a>
+            <a href="#clients" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">Clients</a>
+            <a href="#about" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">About</a>
+            <a href="#contact" class="block py-2 px-6 text-slate-600 hover:bg-slate-100">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">Your Trusted Electrical Partner in Pune</h1>
+                <p class="mt-6 text-lg text-slate-600 max-w-3xl mx-auto">With over a decade of experience, we provide safe, reliable, and efficient electrical solutions for residential, commercial, and industrial clients across Maharashtra.</p>
+                <div class="mt-10">
+                    <a href="#services" class="bg-amber-500 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-amber-600 transition-colors duration-300 shadow-lg">Explore Our Services</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="py-20">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900">Why Choose Us?</h2>
+                    <p class="mt-2 text-slate-600">Our commitment to excellence sets us apart.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-4xl text-amber-500 mb-4">📜</div>
+                        <h3 class="text-xl font-semibold mb-2">Licensed & Certified</h3>
+                        <p class="text-slate-600">Fully licensed electrical contractors adhering to all regulatory standards in Maharashtra.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-4xl text-amber-500 mb-4">👥</div>
+                        <h3 class="text-xl font-semibold mb-2">Experienced Team</h3>
+                        <p class="text-slate-600">Highly skilled electricians trained in the latest techniques and safety protocols.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-4xl text-amber-500 mb-4">🛡️</div>
+                        <h3 class="text-xl font-semibold mb-2">Safety First</h3>
+                        <p class="text-slate-600">We prioritize safety, ensuring all installations meet stringent safety benchmarks.</p>
+                    </div>
+                     <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-4xl text-amber-500 mb-4">🏆</div>
+                        <h3 class="text-xl font-semibold mb-2">Quality Workmanship</h3>
+                        <p class="text-slate-600">Using high-quality materials to ensure durable and reliable electrical systems.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-4xl text-amber-500 mb-4">⏱️</div>
+                        <h3 class="text-xl font-semibold mb-2">Timely Completion</h3>
+                        <p class="text-slate-600">Committed to completing projects on schedule and within budget.</p>
+                    </div>
+                     <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-4xl text-amber-500 mb-4">📍</div>
+                        <h3 class="text-xl font-semibold mb-2">Local Expertise</h3>
+                        <p class="text-slate-600">Deep understanding of Pune's electrical codes and regulations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900">Our Services</h2>
+                    <p class="mt-2 text-slate-600 max-w-2xl mx-auto">We offer a comprehensive range of electrical services tailored to your needs. Select a category to see how we can help.</p>
+                </div>
+
+                <div class="flex justify-center border-b border-slate-200 mb-8">
+                    <button data-tab="residential" class="service-tab py-4 px-6 block hover:text-amber-600 focus:outline-none border-b-2 font-medium transition-colors duration-300 tab-active">Residential</button>
+                    <button data-tab="commercial" class="service-tab py-4 px-6 block hover:text-amber-600 focus:outline-none border-b-2 font-medium transition-colors duration-300 tab-inactive">Commercial</button>
+                    <button data-tab="industrial" class="service-tab py-4 px-6 block hover:text-amber-600 focus:outline-none border-b-2 font-medium transition-colors duration-300 tab-inactive">Industrial</button>
+                </div>
+
+                <div id="service-content">
+                    <div data-content="residential" class="service-panel">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-slate-50 p-6 rounded-lg">New home wiring & installations</div>
+                            <div class="bg-slate-50 p-6 rounded-lg">Renovations & rewiring</div>
+                            <div class="bg-slate-50 p-6 rounded-lg">Lighting design & installation</div>
+                            <div class="bg-slate-50 p-6 rounded-lg">Fan & fixture installation</div>
+                            <div class="bg-slate-50 p-6 rounded-lg">Troubleshooting & repairs</div>
+                            <div class="bg-slate-50 p-6 rounded-lg">Panel upgrades & replacements</div>
+                             <div class="bg-slate-50 p-6 rounded-lg">Earthing solutions</div>
+                            <div class="bg-slate-50 p-6 rounded-lg">Residential projects maintenance</div>
+                            <div class="bg-slate-50 p-6 rounded-lg">All types of machine maintenance</div>
+                        </div>
+                    </div>
+                    <div data-content="commercial" class="service-panel hidden">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                           <div class="bg-slate-50 p-6 rounded-lg">Office & retail space fit-outs</div>
+                           <div class="bg-slate-50 p-6 rounded-lg">Main & sub-panel installations</div>
+                           <div class="bg-slate-50 p-6 rounded-lg">Data & communication cabling</div>
+                           <div class="bg-slate-50 p-6 rounded-lg">Emergency lighting systems</div>
+                           <div class="bg-slate-50 p-6 rounded-lg">Power distribution systems</div>
+                           <div class="bg-slate-50 p-6 rounded-lg">Maintenance & safety audits</div>
+                           <div class="bg-slate-50 p-6 rounded-lg">Energy-efficient lighting</div>
+                        </div>
+                    </div>
+                    <div data-content="industrial" class="service-panel hidden">
+                       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-slate-50 p-6 rounded-lg">Machinery wiring & connections</div>
+                            <div class="bg-slate-50 p-6 rounded-lg">Motor control centers (MCC)</div>
+                            <div class="bg-slate-50 p-6 rounded-lg">Cable tray installations</div>
+                            <div class="bg-slate-50 p-6 rounded-lg">Preventive & breakdown maintenance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900">Our Esteemed Clients & Expertise</h2>
+                    <p class="mt-2 text-slate-600">We are proud to have worked with leading organizations and on diverse projects.</p>
+                </div>
+                <h3 class="text-2xl font-semibold mb-6 text-center text-slate-800">Major Clients</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-32">
+                        <span class="font-semibold text-lg">Nyati Group</span>
+                        <p class="text-sm text-slate-500 mt-1">Building electrical wiring & maintenance</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-32">
+                        <span class="font-semibold text-lg">Rama Group</span>
+                        <p class="text-sm text-slate-500 mt-1">Complete project electrical maintenance</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-32">
+                        <span class="font-semibold text-lg">Panchashil</span>
+                        <p class="text-sm text-slate-500 mt-1">Subcontractor for electrical works</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-32">
+                        <span class="font-semibold text-lg">COEP Technological University</span>
+                        <p class="text-sm text-slate-500 mt-1">College & Hostel Electrical maintenance</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-32">
+                        <span class="font-semibold text-lg">Global Group</span>
+                        <p class="text-sm text-slate-500 mt-1">Complete Building wiring</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-32">
+                        <span class="font-semibold text-lg">UWC Mahindra College</span>
+                        <p class="text-sm text-slate-500 mt-1">750KVA stabilizer installation</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-32">
+                        <span class="font-semibold text-lg">Yazaki India Pvt Ltd</span>
+                        <p class="text-sm text-slate-500 mt-1">UPS installation</p>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold mb-6 mt-16 text-center text-slate-800">Machine Work Expertise</h3>
+                 <div class="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center">
+                        <span class="font-semibold text-lg">Bosch</span>
+                        <p class="text-sm text-slate-500 mt-1">All equipment repair & maintenance</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center">
+                        <span class="font-semibold text-lg">Voltas</span>
+                        <p class="text-sm text-slate-500 mt-1">AC repair & maintenance</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center">
+                        <span class="font-semibold text-lg">Water Pumps</span>
+                        <p class="text-sm text-slate-500 mt-1">All types of water pumps repair & maintenance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900">Our Commitment</h2>
+                </div>
+                <div class="max-w-4xl mx-auto text-lg text-slate-600 leading-relaxed text-center">
+                    <p>At Saharsh Electricals & Engineers, our mission is to deliver innovative, safe, and sustainable electrical solutions that exceed client expectations across Pune and Maharashtra. We are committed to powering our community with integrity, quality, and a relentless focus on customer satisfaction. We look forward to serving all your electrical needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-slate-800 text-white">
+             <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl font-bold">Get in Touch</h2>
+                 <p class="mt-4 text-slate-300 max-w-2xl mx-auto">Ready to start your next project or need an expert consultation? Contact us today!</p>
+                 <div class="mt-8 flex flex-col md:flex-row justify-center items-center gap-8">
+                     <div class="text-lg">
+                         <span class="font-semibold">Phone:</span>
+                         <a href="tel:+919673990744" class="hover:text-amber-400 transition-colors duration-300"> +91 9673990744</a>
+                     </div>
+                     <div class="text-lg">
+                         <span class="font-semibold">Email:</span>
+                         <a href="mailto:amitshelar2405@gmail.com" class="hover:text-amber-400 transition-colors duration-300"> amitshelar2405@gmail.com</a>
+                     </div>
+                 </div>
+             </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Saharsh Electricals & Engineers. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a, header nav a[href^="#"]');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        const serviceTabs = document.querySelectorAll('.service-tab');
+        const servicePanels = document.querySelectorAll('.service-panel');
+
+        serviceTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabTarget = tab.getAttribute('data-tab');
+
+                serviceTabs.forEach(t => {
+                    t.classList.remove('tab-active');
+                    t.classList.add('tab-inactive');
+                });
+                
+                tab.classList.add('tab-active');
+                tab.classList.remove('tab-inactive');
+                
+                servicePanels.forEach(panel => {
+                    if (panel.getAttribute('data-content') === tabTarget) {
+                        panel.classList.remove('hidden');
+                    } else {
+                        panel.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
